@@ -20,6 +20,7 @@ git clone https://github.com/Harman1307/GrindStone.git
 cd grindstone
 chmod +x grindstone.sh
 ./grindstone.sh
+```
 
 
 **THANKS FOR READING :)**
