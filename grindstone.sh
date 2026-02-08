@@ -94,7 +94,7 @@ draw_stats() {
     
     echo ""
     echo -e "  ${BOLD}${WHITE}══════════════════════════════════════════${NC}"
-    echo -e "  ${BOLD}${WHITE}  GRINDSTONE${NC}                      💰 ${GREEN}${BOLD}${coins}${NC}"
+    echo -e "  ${BOLD}${WHITE}  GRINDSTONE${NC}                  Coins: ${GREEN}${BOLD}${coins}${NC}"
     echo -e "  ${BOLD}${WHITE}══════════════════════════════════════════${NC}"
     echo ""
     
@@ -198,7 +198,7 @@ rewards_menu() {
     local coins=$(get_stat "coins")
     echo ""
     echo -e "  ${BOLD}${WHITE}╔════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "  ${BOLD}${WHITE}║${NC}  ${BOLD}REWARDS${NC}                                     ${GREEN}${BOLD}${coins} coins${NC}     ${BOLD}${WHITE}║${NC}"
+    echo -e "  ${BOLD}${WHITE}║${NC}  ${BOLD}REWARDS${NC}                                     ${GREEN}${BOLD}${coins} coins${NC}     ${BOLD}${WHITE} ║${NC}"
     echo -e "  ${BOLD}${WHITE}╚════════════════════════════════════════════════════════════╝${NC}"
     echo ""
     echo -e "  ${CYAN}${BOLD}QUICK DOPAMINE${NC}"
