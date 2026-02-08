@@ -197,19 +197,37 @@ rewards_menu() {
     clear
     local coins=$(get_stat "coins")
     echo ""
-    echo -e "  ${BOLD}${WHITE}══════════════════════════════════════════${NC}"
-    echo -e "  ${BOLD}${WHITE}  REWARDS${NC}                       💰 ${GREEN}${BOLD}${coins}${NC}"
-    echo -e "  ${BOLD}${WHITE}══════════════════════════════════════════${NC}"
+    echo -e "  ${BOLD}${WHITE}╔════════════════════════════════════════════════════════════╗${NC}"
+    echo -e "  ${BOLD}${WHITE}║${NC}  ${BOLD}REWARDS${NC}                                     ${GREEN}${BOLD}${coins} coins${NC}     ${BOLD}${WHITE}║${NC}"
+    echo -e "  ${BOLD}${WHITE}╚════════════════════════════════════════════════════════════╝${NC}"
     echo ""
-    echo -e "    ${WHITE}1${NC}  15 min reels         ${GRAY}-15 coins${NC}"
-    echo -e "    ${WHITE}2${NC}  30 min YouTube       ${GRAY}-25 coins${NC}"
-    echo -e "    ${WHITE}3${NC}  Anime episode        ${GRAY}-40 coins${NC}"
-    echo -e "    ${WHITE}4${NC}  1 hour gaming        ${GRAY}-60 coins${NC}"
-    echo -e "    ${WHITE}5${NC}  Movie                ${GRAY}-100 coins${NC}"
+    echo -e "  ${CYAN}${BOLD}QUICK DOPAMINE${NC}"
+    echo -e "    ${WHITE}1${NC}   15 min reels           ${GRAY}-30 coins${NC}"
+    echo -e "    ${WHITE}2${NC}   30 min YouTube         ${GRAY}-60 coins${NC}"
     echo ""
-    echo -e "    ${WHITE}0${NC}  Back"
+    echo -e "  ${GREEN}${BOLD}ENTERTAINMENT${NC}"
+    echo -e "    ${WHITE}3${NC}   1 anime episode        ${GRAY}-100 coins${NC}"
+    echo -e "    ${WHITE}4${NC}   1 hour gaming          ${GRAY}-150 coins${NC}"
+    echo -e "    ${WHITE}5${NC}   Movie                  ${GRAY}-250 coins${NC}"
+    echo -e "    ${WHITE}6${NC}   Unlock new anime       ${GRAY}-300 coins${NC}"
     echo ""
-    echo -e "  ${BOLD}${WHITE}══════════════════════════════════════════${NC}"
+    echo -e "  ${YELLOW}${BOLD}FOOD & COMFORT${NC}"
+    echo -e "    ${WHITE}7${NC}   Cheat snack            ${GRAY}-100 coins${NC}"
+    echo -e "    ${WHITE}8${NC}   Order food (<Rs.300)   ${GRAY}-400 coins${NC}"
+    echo -e "    ${WHITE}9${NC}   Order food (>Rs.300)   ${GRAY}-500 coins${NC}"
+    echo ""
+    echo -e "  ${PURPLE}${BOLD}FREEDOM${NC}"
+    echo -e "    ${WHITE}10${NC}  Skip workout (guilt-free)  ${GRAY}-200 coins${NC}"
+    echo -e "    ${WHITE}11${NC}  Full day break             ${GRAY}-600 coins${NC}"
+    echo -e "    ${WHITE}12${NC}  Weekend off                ${GRAY}-1000 coins${NC}"
+    echo ""
+    echo -e "  ${RED}${BOLD}BIG PURCHASES${NC}"
+    echo -e "    ${WHITE}13${NC}  Buy something (Rs.500)     ${GRAY}-1500 coins${NC}"
+    echo -e "    ${WHITE}14${NC}  Buy something (Rs.1000)    ${GRAY}-3000 coins${NC}"
+    echo ""
+    echo -e "    ${WHITE}0${NC}   Back"
+    echo ""
+    echo -e "  ${BOLD}${WHITE}════════════════════════════════════════════════════════════${NC}"
     echo ""
     echo -ne "  ${BOLD}>${NC} "
     read choice
@@ -218,11 +236,20 @@ rewards_menu() {
     local reward=""
     
     case $choice in
-        1) cost=15; reward="reels" ;;
-        2) cost=25; reward="YouTube" ;;
-        3) cost=40; reward="anime" ;;
-        4) cost=60; reward="gaming" ;;
-        5) cost=100; reward="movie" ;;
+        1) cost=30; reward="15 min reels" ;;
+        2) cost=60; reward="30 min YouTube" ;;
+        3) cost=100; reward="anime episode" ;;
+        4) cost=150; reward="1 hour gaming" ;;
+        5) cost=250; reward="movie" ;;
+        6) cost=300; reward="new anime unlock" ;;
+        7) cost=100; reward="cheat snack" ;;
+        8) cost=400; reward="food order" ;;
+        9) cost=500; reward="pizza/burger" ;;
+        10) cost=200; reward="workout skip" ;;
+        11) cost=600; reward="full day break" ;;
+        12) cost=1000; reward="weekend off" ;;
+        13) cost=1500; reward="Rs.500 purchase" ;;
+        14) cost=3000; reward="Rs.1000 purchase" ;;
         0) return ;;
         *) return ;;
     esac
